@@ -14,7 +14,7 @@ function formatDate(dateObject) {
 
 async function getLocation(location = 'Manila', days = 8, ) {
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=8242900a48ad4de4bd1132203230709&q=${location}&days=${days}&aqi=no&alerts=no`, {mode: 'cors'})
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=8242900a48ad4de4bd1132203230709&q=${location}&days=${days}&aqi=no&alerts=no`, {mode: 'cors'})
         const weatherData = await response.json()
         if(!response.ok) {
             throw new Error(`Error! ${response.statusText}`)
